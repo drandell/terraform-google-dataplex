@@ -18,3 +18,18 @@ module "dataplex_zones" {
     module.dataplex_lakes
   ]
 }
+
+module "dataplex_assets" {
+  source = "./modules/assets"
+
+  project         = var.project_id
+  location        = var.location
+  assets          = var.assets
+  lake_self_links = module.dataplex_lakes.self_links
+  zone_self_links = module.dataplex_zones.self_links
+
+  depends_on = [
+    module.dataplex_lakes,
+    module.dataplex_zones
+  ]
+}
