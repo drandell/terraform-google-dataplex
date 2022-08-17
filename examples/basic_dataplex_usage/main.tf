@@ -5,4 +5,5 @@ module "google_dataplex" {
   location   = var.location
   lakes      = var.lakes
   zones      = var.zones
+  assets     = var.assets
 }

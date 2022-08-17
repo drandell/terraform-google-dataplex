@@ -1,3 +1,13 @@
+output "asset_self_links" {
+  value       = module.dataplex_assets.self_links
+  description = "Map of self links to the defined Dataplex assets"
+}
+
+output "asset_uids" {
+  value       = module.dataplex_assets.uids
+  description = "Map of UIDs to the defined Dataplex assets"
+}
+
 output "lake_self_links" {
   value       = module.dataplex_lakes.self_links
   description = "Map of self links to the defined Dataplex lakes"
