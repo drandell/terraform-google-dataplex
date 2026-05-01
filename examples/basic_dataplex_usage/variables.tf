@@ -99,3 +99,62 @@ variable "assets" {
     error_message = "Supported resource spec types are 'STORAGE_BUCKET' or 'BIGQUERY_DATASET'"
   }
 }
+
+variable "entry_types" {
+  type = list(object({
+    id           = string
+    location     = optional(string)
+    project      = optional(string)
+    type_aliases = optional(list(string))
+    system       = optional(string)
+    platform     = optional(string)
+    display_name = optional(string)
+    description  = optional(string)
+    labels       = optional(map(string))
+    required_aspects = optional(map(object({
+      type = string
+    })), {})
+  }))
+  default     = []
+  description = "(Optional) A list of entry type objects"
+}
+
+variable "entry_groups" {
+  type = list(object({
+    id           = string
+    display_name = optional(string)
+    description  = optional(string)
+    location     = optional(string)
+    project      = optional(string)
+  }))
+  default     = []
+  description = "(Optional) A list of entry group objects"
+}
+
+variable "entries" {
+  type = list(object({
+    id                    = string
+    type                  = string
+    parent_entry_group_id = optional(string)
+    entry_group_id        = optional(string)
+    fully_qualified_name  = optional(string)
+    location              = optional(string)
+    project               = optional(string)
+    source = object({
+      resource     = optional(string)
+      system       = optional(string)
+      platform     = optional(string)
+      display_name = optional(string)
+      description  = optional(string)
+      labels       = optional(map(string))
+      create_time  = optional(string)
+      update_time  = optional(string)
+      ancestors = optional(map(object({
+        name = string
+        type = string
+      })), {})
+    })
+  }))
+  default     = []
+  description = "(Optional) A list of entry objects"
+}

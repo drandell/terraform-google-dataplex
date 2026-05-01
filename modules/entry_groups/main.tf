@@ -3,12 +3,12 @@ locals {
 }
 
 resource "google_dataplex_entry_group" "this" {
-  for_each       = local.groups
+  for_each = local.groups
 
   entry_group_id = each.key
   display_name   = each.value.display_name
   description    = each.value.description
 
-  project = coalesce(each.value["project"], var.project)
+  project  = coalesce(each.value["project"], var.project)
   location = coalesce(each.value["location"], var.location)
 }

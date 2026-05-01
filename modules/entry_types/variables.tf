@@ -9,7 +9,7 @@ variable "entry_types" {
     display_name = optional(string)
     description  = optional(string)
     labels       = optional(map(string))
-    required_aspects    = optional(map(object({
+    required_aspects = optional(map(object({
       type = string
     })), {})
   }))

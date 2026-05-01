@@ -111,7 +111,7 @@ variable "entry_types" {
     display_name = optional(string)
     description  = optional(string)
     labels       = optional(map(string))
-    required_aspects    = optional(map(object({
+    required_aspects = optional(map(object({
       type = string
     })), {})
   }))
@@ -127,7 +127,8 @@ variable "entry_groups" {
     location     = optional(string)
     project      = optional(string)
   }))
-  description = "(Required) A list of entry group objects"
+  default     = []
+  description = "(Optional) A list of entry group objects"
 }
 
 variable "entries" {
@@ -148,7 +149,7 @@ variable "entries" {
       labels       = optional(map(string))
       create_time  = optional(string)
       update_time  = optional(string)
-      ancestors    = optional(map(object({
+      ancestors = optional(map(object({
         name = string
         type = string
       })), {})

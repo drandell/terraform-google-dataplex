@@ -26,7 +26,7 @@ variable "entries" {
       labels       = optional(map(string))
       create_time  = optional(string)
       update_time  = optional(string)
-      ancestors    = optional(map(object({
+      ancestors = optional(map(object({
         name = string
         type = string
       })), {})

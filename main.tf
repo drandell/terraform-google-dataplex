@@ -38,8 +38,8 @@ module "dataplex_entry_types" {
   source = "./modules/entry_types"
 
   entry_types = var.entry_types
-  project      = var.project_id
-  location     = var.location
+  project     = var.project_id
+  location    = var.location
 }
 
 module "dataplex_entry_groups" {
@@ -53,14 +53,14 @@ module "dataplex_entry_groups" {
 module "dataplex_entries" {
   source = "./modules/entries"
 
-  entries = var.entries
-  project = var.project_id
+  entries  = var.entries
+  project  = var.project_id
   location = var.location
 
   entry_group_self_links = module.dataplex_entry_groups.self_links
-  entry_type_self_links = module.dataplex_entry_types.self_links
+  entry_type_self_links  = module.dataplex_entry_types.self_links
 
-  depends_on = [ 
+  depends_on = [
     module.dataplex_entry_groups,
     module.dataplex_entry_types
   ]
