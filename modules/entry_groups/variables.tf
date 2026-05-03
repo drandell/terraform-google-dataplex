@@ -6,7 +6,8 @@ variable "entry_groups" {
     location     = optional(string)
     project      = optional(string)
   }))
-  description = "(Required) A list of entry group objects"
+  default     = []
+  description = "(Optional) A list of entry group objects"
 }
 
 variable "project" {
