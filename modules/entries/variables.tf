@@ -17,7 +17,11 @@ variable "entries" {
     fully_qualified_name  = optional(string)
     location              = optional(string)
     project               = optional(string)
-    source = object({
+    aspects = optional(map(object({
+      id             = string,
+      json_file_path = string
+    })), {})
+    source = optional(object({
       resource     = optional(string)
       system       = optional(string)
       platform     = optional(string)
@@ -30,7 +34,7 @@ variable "entries" {
         name = string
         type = string
       })), {})
-    })
+    }), {})
   }))
   default     = []
   description = "(Optional) A list of entry objects"

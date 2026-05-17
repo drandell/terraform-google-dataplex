@@ -37,3 +37,24 @@ assets = [
     }
   }
 ]
+
+entry_groups = [
+  {
+    id = "my_entry_group"
+  }
+]
+
+entry_types = [
+  {
+    id = "my_entry_type"
+  }
+]
+
+entries = [
+  {
+    id                    = "my_entry"
+    type                  = "my_entry_type"
+    parent_entry_group_id = "my_entry_group"
+  }
+]
+
