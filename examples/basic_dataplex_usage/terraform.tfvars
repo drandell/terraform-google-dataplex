@@ -46,7 +46,8 @@ entry_groups = [
 
 entry_types = [
   {
-    id = "my_entry_type"
+    id           = "my_entry_type"
+    display_name = "My Entry Type"
   }
 ]
 

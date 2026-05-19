@@ -8,6 +8,21 @@ output "asset_uids" {
   description = "Map of UIDs to the defined Dataplex assets"
 }
 
+output "entry_self_links" {
+  value       = module.dataplex_entries.self_links
+  description = "Map of self links to the defined Dataplex entries"
+}
+
+output "entry_groups_self_links" {
+  value       = module.dataplex_entry_types.self_links
+  description = "Map of self links to the defined Dataplex Entry groups"
+}
+
+output "entry_types_self_links" {
+  value       = module.dataplex_entry_types.self_links
+  description = "Map of self links to the defined Dataplex Entry types"
+}
+
 output "lake_self_links" {
   value       = module.dataplex_lakes.self_links
   description = "Map of self links to the defined Dataplex lakes"

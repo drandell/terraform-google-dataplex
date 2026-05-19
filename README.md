@@ -2,7 +2,7 @@
 
 *UNOFFICIAL*
 
-This module allows the creation of Google Cloud Platform Dataplex Lakes and Zones
+This module allows the creation of Google Cloud Platform Dataplex Lakes, Zones, Assets, Entry Types, Entry Groups and Entries.
 
 ## Compatibility 
 
