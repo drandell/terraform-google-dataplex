@@ -8,6 +8,11 @@ output "asset_uids" {
   description = "Map of UIDs to the defined Dataplex assets"
 }
 
+output "entry_self_links" {
+  value       = module.google_dataplex.entry_self_links
+  description = "Map of self links to the defined Dataplex entries"
+}
+
 output "lake_self_links" {
   value       = module.google_dataplex.lake_self_links
   description = "Map of self links to the defined Dataplex lakes"

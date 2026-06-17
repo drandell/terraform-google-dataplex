@@ -2,7 +2,7 @@
 
 *UNOFFICIAL*
 
-This module allows the creation of Google Cloud Platform Dataplex Lakes and Zones
+This module allows the creation of Google Cloud Platform Dataplex Lakes, Zones, Assets, Entry Types, Entry Groups and Entries.
 
 ## Compatibility 
 
@@ -21,7 +21,7 @@ These sections describe requirements for using this module.
 The following dependencies must be available:
 
 - [Terraform](https://www.terraform.io/downloads.html) >= 1.3.0, < 2.0.0
-- [Terraform Provider for GCP](https://registry.terraform.io/providers/hashicorp/google/latest) >= v4.32.0, < 5.0.0
+- [Terraform Provider for GCP](https://registry.terraform.io/providers/hashicorp/google/latest) >= 6.49.0, < 8.0.0
 
 ### Service Account
 

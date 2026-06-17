@@ -32,3 +32,4 @@ examples/basic_dataplex_usage/.terraform.lock.hcl
 examples/basic_dataplex_usage/key.json
 examples/basic_dataplex_usage/plan
 examples/basic_dataplex_usage/.terraform
+*.DS_Store
